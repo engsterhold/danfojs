@@ -243,7 +243,7 @@ export function _loc({ ndFrame, rows, columns }: {
             if (rows[0].startsWith(`"`) || rows[0].startsWith(`'`) || rows[0].startsWith("`")) {
                 temp = _index.indexOf(rows[0].replace(/['"`]/g, ''))
             } else {
-                temp = _index.indexOf(Number(rows[0]))
+                temp = _index.indexOf(rows[0])
             }
 
             if (temp === -1) {
@@ -269,7 +269,7 @@ export function _loc({ ndFrame, rows, columns }: {
                 if (rowSplit[0].startsWith(`"`) || rowSplit[0].startsWith(`'`) || rowSplit[0].startsWith("`")) {
                     start = _index.indexOf(rowSplit[0].replace(/['"`]/g, ''))
                 } else {
-                    start = _index.indexOf(Number(rowSplit[0]))
+                    start = _index.indexOf(rowSplit[0])
                 }
 
             }
@@ -280,7 +280,7 @@ export function _loc({ ndFrame, rows, columns }: {
                 if (rowSplit[0].startsWith(`"`) || rowSplit[0].startsWith(`'`) || rowSplit[0].startsWith("`")) {
                     end = _index.indexOf(rowSplit[1].replace(/['"`]/g, ''))
                 } else {
-                    end = _index.indexOf(Number(rowSplit[1]))
+                    end = _index.indexOf(rowSplit[1])
                 }
 
             }
